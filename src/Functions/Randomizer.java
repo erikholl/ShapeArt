@@ -12,20 +12,23 @@ public class Randomizer {
     private static int maxCoordinate = 1200;
     private static int rangeCoordinate = maxCoordinate - minCoordinate + 1;
 
-    private static int minRGB = 0;
-    private static int maxRGB = 127; // (MIDI max :) - and keep it on the
-    // darkie side
+    private static int minRGB = 127;
+    private static int maxRGB = 255; // (127 is MIDI range; no particular
+    // reason for that)
     private static int rangeRGB = maxRGB - minRGB + 1;
 
     public static int randomizeSide() {
-        return (int) Math.floor(Math.random() * rangeSide);
+        return (int) Math.floor(Math.random() * rangeSide + minSide); //
+        // correction made: add the minvalue
     }
 
     public static int randomizeCoordinate() {
-        return (int) Math.floor(Math.random() * rangeCoordinate);
+        return (int) Math.floor(Math.random() * rangeCoordinate + minCoordinate); //
+        // correction made: add the minvalue
     }
 
     public static int randomizeColor() {
-        return (int) Math.floor(Math.random() * rangeRGB);
+        return (int) Math.floor(Math.random() * rangeRGB + minRGB); //
+        // correction made: add the minvalue
     }
 }

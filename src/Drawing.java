@@ -7,7 +7,7 @@ public class Drawing extends Canvas{
         JFrame frame = new JFrame("My Drawing");
         Canvas canvas = new Drawing();
         canvas.setSize(1200, 1200);
-        canvas.setBackground(Color.gray);
+        canvas.setBackground(Color.white);
         frame.add(canvas);
         frame.pack();
         frame.setVisible(true);
