@@ -1,21 +1,21 @@
-package Functions;
+package Math;
 
-public class Randomizer {
+public abstract class Randomizer {
     // instance variables
 
     // static variables
-    private static int minSide = 1;
-    private static int maxSide = 600;
-    private static int rangeSide = maxSide - minSide + 1;
+    private static final int minSide = 1;
+    private static final int maxSide = 600;
+    private static final int rangeSide = maxSide - minSide + 1;
 
-    private static int minCoordinate = 0;
-    private static int maxCoordinate = 1200;
-    private static int rangeCoordinate = maxCoordinate - minCoordinate + 1;
+    private static final int minCoordinate = 0;
+    private static final int maxCoordinate = 1200;
+    private static final int rangeCoordinate =
+            maxCoordinate - minCoordinate + 1;
 
-    private static int minRGB = 127;
-    private static int maxRGB = 255; // (127 is MIDI range; no particular
-    // reason for that)
-    private static int rangeRGB = maxRGB - minRGB + 1;
+    private static final int minRGB = 0;
+    private static final int maxRGB = 255;
+    private static final int rangeRGB = maxRGB - minRGB + 1;
 
     public static int randomizeSide() {
         return (int) Math.floor(Math.random() * rangeSide + minSide); //
