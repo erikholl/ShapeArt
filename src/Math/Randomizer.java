@@ -7,13 +7,17 @@ public abstract class Randomizer {
     // randomized within
     // shape dimensions, sides
     private static final int minSide = 1;
-    private static final int maxSide = 600;
+    private static final int maxSide = 400;
     private static final int rangeSide = maxSide - minSide + 1;
     // coordinates
-    private static final int minCoordinate = 0;
-    private static final int maxCoordinate = 1200;
-    private static final int rangeCoordinate =
-            maxCoordinate - minCoordinate + 1;
+    private static final int minXCOORDINATE = 0;
+    private static final int maxXCOORDINATE = 900;
+    private static final int rangeXCOORDINATE =
+            maxXCOORDINATE - minXCOORDINATE + 1;
+    private static final int minYCOORDINATE = 0;
+    private static final int maxYCOORDINATE = 900;
+    private static final int rangeYCOORDINATE =
+            maxYCOORDINATE - minYCOORDINATE + 1;
     // color RGB
     private static final int minRGB = 0;
     private static final int maxRGB = 255;
@@ -30,13 +34,17 @@ public abstract class Randomizer {
     private static final int minMILLIWIDE = 2000;
     private static final int maxMILLIWIDE = 5000;
     private static final int rangeMILLIWIDE = maxMILLIWIDE - minMILLIWIDE + 1;
-    // getter methods
+    // getters
     public static int randomizeSide() {
         return (int) Math.floor(Math.random() * rangeSide + minSide);
     }
 
-    public static int randomizeCoordinate() {
-        return (int) Math.floor(Math.random() * rangeCoordinate + minCoordinate);
+    public static int randomizeXCoordinate() {
+        return (int) Math.floor(Math.random() * rangeXCOORDINATE + minXCOORDINATE);
+    }
+
+    public static int randomizeYCoordinate() {
+        return (int) Math.floor(Math.random() * rangeYCOORDINATE + minYCOORDINATE);
     }
 
     public static int randomizeColor() {

@@ -3,8 +3,6 @@ package Functionality;
 import Math.Randomizer;
 import Shapes.ShapeAttributes;
 
-import java.util.TimerTask;
-
 public class Task {
     // instance variables
     // sides
@@ -36,13 +34,13 @@ public class Task {
 
     public int getRX() {
         rXCoordinate =
-                Randomizer.randomizeCoordinate() * shapeAttributes.getX();
+                Randomizer.randomizeXCoordinate() * shapeAttributes.getX();
         return rXCoordinate;
     }
 
     public int getRY() {
         rYCoordinate =
-                Randomizer.randomizeCoordinate() * shapeAttributes.getY();
+                Randomizer.randomizeYCoordinate() * shapeAttributes.getY();
         return rYCoordinate;
     }
 
